@@ -1,0 +1,157 @@
+{
+ "updatedAt": "2026-10-16T12:00:00Z",
+ "items": [
+  {
+   "symbol": "XLE",
+   "name": "Energy sector ETF",
+   "stance": "Accumulate on dips",
+   "conviction": 2,
+   "horizon": "3\u20136 months",
+   "thesis": "Crude is near $98 on Middle East risk, energy led on the hot-CPI day, and Schwab rates Energy 'more favored'. Energy also hedges the inflation risk that hurts the rest of a tech-heavy portfolio.",
+   "risks": "A Mideast de-escalation or a real Russia\u2013Ukraine energy deal could drop crude fast. Demand falls if the Fed over-tightens.",
+   "trigger": "Crude falls back below ~$85, or a durable ceasefire takes the risk premium out.",
+   "sources": [
+    {
+     "name": "BabyPips",
+     "url": "https://www.babypips.com/news/financial-forex-market-recap-2026-10-15"
+    },
+    {
+     "name": "Schwab sector view",
+     "url": "https://www.schwab.com/learn/story/stock-sector-outlook"
+    }
+   ]
+  },
+  {
+   "symbol": "GS",
+   "name": "Goldman Sachs",
+   "stance": "Buy candidate",
+   "conviction": 2,
+   "horizon": "6\u201312 months",
+   "thesis": "Q3 EPS of $17.01 beat consensus by about 30% on record equities trading. Higher-for-longer rates support bank income, and Financials are a favored sector.",
+   "risks": "Trading revenue is cyclical, and the beat is partly priced in after the jump. Credit stress rises if rates keep climbing.",
+   "trigger": "Deal and trading activity slow, or credit spreads widen sharply.",
+   "sources": [
+    {
+     "name": "CNBC",
+     "url": "https://www.cnbc.com/2026/10/13/bank-earnings-live-updates.html"
+    },
+    {
+     "name": "Investing.com",
+     "url": "https://www.investing.com/analysis/bank-earnings-q3-2026-goldman-30-beat-jpmorgan-misses-revenue-200689491"
+    }
+   ]
+  },
+  {
+   "symbol": "GLD",
+   "name": "Gold",
+   "stance": "Hedge",
+   "conviction": 2,
+   "horizon": "Ongoing",
+   "thesis": "Gold is near $4,170 and rising while risk assets fall. Inflation is well above target and the Fed doesn't expect 2% until 2029. A 5\u201310% position can cushion an inflation or geopolitical shock.",
+   "risks": "Real yields above 5% on the 10-year compete with a non-yielding asset. Gold can pull back sharply after big runs.",
+   "trigger": "Inflation clearly cools and the Fed signals cuts.",
+   "sources": [
+    {
+     "name": "CoinDesk",
+     "url": "https://www.coindesk.com/daybook-us/2026/10/15/bitcoin-copper-stocks-yields-all-fall-gold-rises"
+    },
+    {
+     "name": "CNBC Fed minutes",
+     "url": "https://www.cnbc.com/2026/10/07/fed-officials-see-another-hike-coming-but-no-sign-as-to-when-minutes-show.html"
+    }
+   ]
+  },
+  {
+   "symbol": "TSM",
+   "name": "Taiwan Semiconductor",
+   "stance": "Watch: buy on weakness",
+   "conviction": 2,
+   "horizon": "12+ months",
+   "thesis": "Sixth straight record profit, revenue above guidance, and Q4 guided to $52.3\u201354.3B. The selloff is about margins, not demand, which can give long-term buyers a better entry.",
+   "risks": "2nm and overseas fab ramps dilute margins. Taiwan geopolitics. High multiples are sensitive to 5% yields and any AI capex slowdown.",
+   "trigger": "Guidance is cut or big AI customers trim capex plans.",
+   "sources": [
+    {
+     "name": "CNBC",
+     "url": "https://www.cnbc.com/2026/10/15/tsmc-third-quarter-profit-global-ai-.html"
+    }
+   ]
+  },
+  {
+   "symbol": "NVDA",
+   "name": "Nvidia and high-multiple semis",
+   "stance": "Trim if overweight",
+   "conviction": 2,
+   "horizon": "Next 1\u20132 months",
+   "thesis": "With the 10-year above 5% and hike odds rising, the highest-valuation AI names are being sold first. Memory chips also face new Chinese competition. Trimming an oversized position locks in gains and lowers rate risk.",
+   "risks": "AI earnings keep surprising; Nvidia reports in late November and could reverse the trend. Trimming has tax consequences.",
+   "trigger": "Yields fall back below ~4.75%, or the hot inflation prints prove one-off.",
+   "sources": [
+    {
+     "name": "Gotrade",
+     "url": "https://www.heygotrade.com/en/news/nvidia-nvda-stock-news-october-15-2026/"
+    },
+    {
+     "name": "CNBC",
+     "url": "https://www.cnbc.com/2026/10/14/stock-market-today-live-updates.html"
+    }
+   ]
+  },
+  {
+   "symbol": "T-bills",
+   "name": "Short-term Treasuries",
+   "stance": "Park idle cash",
+   "conviction": 3,
+   "horizon": "Until better entries",
+   "thesis": "With policy at 3.75\u20134.00% and possibly higher, short T-bills pay close to the policy rate with almost no price risk while you wait for pullbacks.",
+   "risks": "Yields fall if the Fed pivots. You miss upside if stocks rally hard.",
+   "trigger": "The Fed signals rate cuts.",
+   "sources": [
+    {
+     "name": "Forbes",
+     "url": "https://www.forbes.com/sites/digital-assets/2026/10/14/fed-66-likely-to-hold-rates-steady-following-high-inflation-data/"
+    }
+   ]
+  },
+  {
+   "symbol": "XLV",
+   "name": "Healthcare sector ETF",
+   "stance": "Buy candidate (defensive)",
+   "conviction": 1,
+   "horizon": "6\u201312 months",
+   "thesis": "Healthcare led European gains and is a favored sector. Its earnings depend less on rates and oil than tech or consumer names.",
+   "risks": "Drug-pricing policy risk. Lags in strong risk-on rallies.",
+   "trigger": "Policy headlines target drug pricing directly.",
+   "sources": [
+    {
+     "name": "Business Recorder",
+     "url": "https://www.brecorder.com/news/40444464/european-shares-hit-more-than-two-week-high"
+    },
+    {
+     "name": "Schwab sector view",
+     "url": "https://www.schwab.com/learn/story/stock-sector-outlook"
+    }
+   ]
+  },
+  {
+   "symbol": "XLY",
+   "name": "Consumer discretionary",
+   "stance": "Avoid for now",
+   "conviction": 1,
+   "horizon": "Through Q3 earnings",
+   "thesis": "Schwab's least-favored sector. $98 oil and higher borrowing costs squeeze spending, and Tesla reports Oct 21 after a 14.5% drop on its last report.",
+   "risks": "A cooling-inflation surprise would rally beaten-down names quickly.",
+   "trigger": "Oil drops sharply or inflation cools.",
+   "sources": [
+    {
+     "name": "Schwab sector view",
+     "url": "https://www.schwab.com/learn/story/stock-sector-outlook"
+    },
+    {
+     "name": "Ortex",
+     "url": "https://ortex.news/articles/188766/big-week-ahead-tesla-netflix-gm-report"
+    }
+   ]
+  }
+ ]
+}

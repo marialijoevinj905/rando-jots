@@ -1,0 +1,110 @@
+{
+ "updatedAt": "2026-10-16T12:00:00Z",
+ "asOfLabel": "Thu Oct 15, 2026 close",
+ "tape": [
+  {
+   "label": "S&P 500",
+   "value": "7,744.06",
+   "chg": 0.33
+  },
+  {
+   "label": "Nasdaq",
+   "value": "26,713.03",
+   "chg": 0.08
+  },
+  {
+   "label": "Dow",
+   "value": "52,177.69",
+   "chg": 1.08
+  },
+  {
+   "label": "STOXX 600",
+   "value": "640.16",
+   "chg": 0.38
+  },
+  {
+   "label": "FTSE 100",
+   "value": "10,840",
+   "chg": 1.1
+  },
+  {
+   "label": "Nikkei 225",
+   "value": "64,426",
+   "chg": null,
+   "note": "Fell as much as 3.5% intraday"
+  },
+  {
+   "label": "Hang Seng",
+   "value": "24,063",
+   "chg": null,
+   "note": "Closed lower on a tech selloff"
+  },
+  {
+   "label": "Sensex",
+   "value": "72,781.89",
+   "chg": -0.34
+  },
+  {
+   "label": "US 10Y",
+   "value": "5.08% \u00b7 \u221211bp",
+   "chg": null
+  },
+  {
+   "label": "Crude oil",
+   "value": "~$98",
+   "chg": 2.2
+  },
+  {
+   "label": "Gold",
+   "value": "~$4,170",
+   "chg": 1.6
+  },
+  {
+   "label": "Bitcoin",
+   "value": "~$82,300",
+   "chg": 0.8
+  },
+  {
+   "label": "Dollar index",
+   "value": "~102.0",
+   "chg": -0.5
+  }
+ ],
+ "regime": {
+  "label": "Cautious: inflation and rate-hike risk",
+  "score": 64,
+  "summary": "Hot September CPI and a 1.3% jump in producer prices revived Fed hike fears, pushing the 10-year yield above 5%. Money is rotating out of AI and long-duration tech into value, energy, banks and defensives, while oil near $98 on Middle East tension adds to inflation pressure. Breadth is improving, so this reads as rotation more than a broad selloff."
+ },
+ "macro": [
+  {
+   "label": "Fed funds",
+   "value": "3.75\u20134.00%",
+   "note": "Hiked 25bp Sep 17; most officials see one more by year end"
+  },
+  {
+   "label": "Next FOMC",
+   "value": "Oct 27\u201328",
+   "note": "Hold ~66\u201376% likely; Dec hike odds ~63%"
+  },
+  {
+   "label": "Core PCE (Aug)",
+   "value": "3.0%",
+   "note": "Headline 3.4%; Fed sees 2% only by 2029"
+  },
+  {
+   "label": "Sept CPI",
+   "value": "Above forecast",
+   "note": "Both headline and core beat estimates"
+  },
+  {
+   "label": "PPI (m/m)",
+   "value": "+1.3%",
+   "note": "vs +0.5% expected; biggest core gain in 4 years"
+  },
+  {
+   "label": "Breadth",
+   "value": ">50% of S&P",
+   "note": "above 200-day average, up from ~40% in late Sep"
+  }
+ ]
+}

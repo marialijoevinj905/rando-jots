@@ -1,0 +1,205 @@
+{
+ "updatedAt": "2026-10-16T12:00:00Z",
+ "items": [
+  {
+   "date": "Oct 15",
+   "region": "United States",
+   "headline": "Producer prices jump 1.3% in September, more than double forecasts",
+   "summary": "The core PPI posted its biggest gain in four years. Stocks opened lower before recovering; yields fell late in the day. Adds to the case for further Fed tightening.",
+   "impact": "bearish",
+   "sectors": [
+    "Semiconductors",
+    "Software",
+    "Consumer Discretionary"
+   ],
+   "tickers": [],
+   "source": "Schwab",
+   "url": "https://www.schwab.com/learn/story/stock-market-update-open"
+  },
+  {
+   "date": "Oct 14",
+   "region": "United States",
+   "headline": "Hot September CPI revives Fed rate-hike fears; Nasdaq drops 1.9%",
+   "summary": "Headline and core inflation beat estimates. Rate-sensitive tech and financials fell hardest while energy led. Markets now price meaningful odds of a December hike.",
+   "impact": "bearish",
+   "sectors": [
+    "Semiconductors",
+    "Software",
+    "Tech Hardware",
+    "Communication"
+   ],
+   "tickers": [
+    "NVDA",
+    "MSFT"
+   ],
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/10/14/stock-market-today-live-updates.html"
+  },
+  {
+   "date": "Oct 15",
+   "region": "Middle East",
+   "headline": "Oil climbs 2.2% to near $98 as Middle East tensions build",
+   "summary": "Reports say President Trump is weighing joining Saudi Arabia against Tehran-backed Houthis in Yemen. Higher crude supports energy producers but squeezes consumers and feeds inflation.",
+   "impact": "mixed",
+   "sectors": [
+    "Energy",
+    "Consumer Discretionary"
+   ],
+   "tickers": [
+    "XLE"
+   ],
+   "source": "BabyPips",
+   "url": "https://www.babypips.com/news/financial-forex-market-recap-2026-10-15"
+  },
+  {
+   "date": "Oct 15",
+   "region": "Asia",
+   "headline": "TSMC posts sixth straight record profit, guides Q4 to $52.3\u201354.3B",
+   "summary": "Revenue of $46.7B beat the top of guidance, but 66.4% gross margin slipped on the 2nm ramp. Shares closed down about 3.4% as investors focused on margin dilution and capex.",
+   "impact": "mixed",
+   "sectors": [
+    "Semiconductors"
+   ],
+   "tickers": [
+    "TSM",
+    "NVDA"
+   ],
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/10/15/tsmc-third-quarter-profit-global-ai-.html"
+  },
+  {
+   "date": "Oct 15",
+   "region": "United States",
+   "headline": "Nvidia falls as bond yields and debt-funded AI spending weigh",
+   "summary": "NVDA closed at $217.23, down 1.8%, extending the prior day's 3.2% drop. Investors are questioning AI infrastructure financing with the 10-year above 5%.",
+   "impact": "bearish",
+   "sectors": [
+    "Semiconductors"
+   ],
+   "tickers": [
+    "NVDA"
+   ],
+   "source": "Gotrade",
+   "url": "https://www.heygotrade.com/en/news/nvidia-nvda-stock-news-october-15-2026/"
+  },
+  {
+   "date": "Oct 12",
+   "region": "Asia",
+   "headline": "China's CXMT chip progress hits Micron, Samsung and SK Hynix",
+   "summary": "Memory makers sold off on fears of rising competition from China's CXMT, which reported progress on a new chip structure.",
+   "impact": "bearish",
+   "sectors": [
+    "Semiconductors"
+   ],
+   "tickers": [
+    "MU"
+   ],
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/10/11/stock-market-today-live-updates.html"
+  },
+  {
+   "date": "Oct 13",
+   "region": "United States",
+   "headline": "Goldman beats by ~30% on record equities trading; JPMorgan misses",
+   "summary": "GS earned $17.01 a share on $18.68B revenue. JPMorgan's $5.57 EPS missed $5.90 despite 13% NII growth. Bank of America took a $1.2B regulatory charge.",
+   "impact": "mixed",
+   "sectors": [
+    "Financials"
+   ],
+   "tickers": [
+    "GS",
+    "JPM",
+    "BAC"
+   ],
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/10/13/bank-earnings-live-updates.html"
+  },
+  {
+   "date": "Oct 14",
+   "region": "United States",
+   "headline": "Apple closes above $5 trillion market value for the first time",
+   "summary": "Apple has held up better than chip names during the AI selloff, acting as a relative safe haven within mega-cap tech.",
+   "impact": "bullish",
+   "sectors": [
+    "Tech Hardware"
+   ],
+   "tickers": [
+    "AAPL"
+   ],
+   "source": "Quartz",
+   "url": "https://qz.com/apple-stock-closes-above-5-trillion-first-time-nvidia-101526"
+  },
+  {
+   "date": "Oct 15",
+   "region": "United States",
+   "headline": "Dow jumps 1.1% as money rotates from AI into value",
+   "summary": "More than half of S&P 500 stocks now trade above their 200-day averages, up from about 40% in late September. Leadership is broadening beyond mega-cap tech.",
+   "impact": "bullish",
+   "sectors": [
+    "Financials",
+    "Industrials",
+    "Healthcare"
+   ],
+   "tickers": [],
+   "source": "InvestingLive",
+   "url": "https://investinglive.com/stocks/dow-leads-us-stock-rebound-indices-snatch-victory-from-the-jaws-of-defeat/"
+  },
+  {
+   "date": "Oct 15",
+   "region": "Global",
+   "headline": "Gold rises to ~$4,170 while bitcoin, copper and stocks slip",
+   "summary": "Gold gained 1.6% as investors sought hedges. Bitcoin swung below $81K with $485M in liquidations before ending near $82.3K.",
+   "impact": "mixed",
+   "sectors": [
+    "Commodities",
+    "Crypto"
+   ],
+   "tickers": [
+    "GLD"
+   ],
+   "source": "CoinDesk",
+   "url": "https://www.coindesk.com/daybook-us/2026/10/15/bitcoin-copper-stocks-yields-all-fall-gold-rises"
+  },
+  {
+   "date": "Oct 15",
+   "region": "Europe",
+   "headline": "European shares hit a two-week high; FTSE 100 up 1.1%",
+   "summary": "Banks lifted London while healthcare led the STOXX 600. A disputed Russia\u2013Ukraine 'energy ceasefire' keeps European energy prices in focus.",
+   "impact": "bullish",
+   "sectors": [
+    "Financials",
+    "Healthcare",
+    "Energy"
+   ],
+   "tickers": [],
+   "source": "Business Recorder",
+   "url": "https://www.brecorder.com/news/40444464/european-shares-hit-more-than-two-week-high"
+  },
+  {
+   "date": "Oct 15",
+   "region": "India",
+   "headline": "Sensex slips 0.3% on wholesale inflation and high crude",
+   "summary": "India is a large oil importer, so $98 crude pressures its inflation and currency.",
+   "impact": "bearish",
+   "sectors": [
+    "Energy"
+   ],
+   "tickers": [],
+   "source": "TradingView",
+   "url": "https://www.tradingview.com/news/moodys:6a1a94efcbd37:0-stock-market-outlook-today-15-oct-sensex-nifty-prediction-djia-s-p-nasdaq-gift-nifty-kospi-nikkei-taiwan-cues/"
+  },
+  {
+   "date": "Oct 12",
+   "region": "Global",
+   "headline": "Shipping stocks hit record highs on higher oil freight rates",
+   "summary": "Tanker and shipping names are benefiting from Middle East disruption and longer trade routes.",
+   "impact": "bullish",
+   "sectors": [
+    "Industrials"
+   ],
+   "tickers": [],
+   "source": "CNBC",
+   "url": "https://www.cnbc.com/2026/10/11/stock-market-today-live-updates.html"
+  }
+ ]
+}

@@ -1,0 +1,41 @@
+{
+ "updatedAt": "2026-10-16T12:00:00Z",
+ "items": [
+  {
+   "date": "2026-10-14",
+   "label": "September CPI",
+   "kind": "Macro",
+   "why": "Came in hot on headline and core; triggered the tech selloff."
+  },
+  {
+   "date": "2026-10-15",
+   "label": "TSMC Q3 results",
+   "kind": "Earnings",
+   "why": "Beat, but margin guidance pressured chip stocks."
+  },
+  {
+   "date": "2026-10-19",
+   "label": "MSCI index review ranking day",
+   "kind": "Index",
+   "why": "Ranks for the November rebalance; can move flows in affected names."
+  },
+  {
+   "date": "2026-10-20",
+   "label": "Netflix after close; GE, GM, RTX, Northrop before open",
+   "kind": "Earnings",
+   "why": "First read on consumer and industrial demand under higher rates."
+  },
+  {
+   "date": "2026-10-21",
+   "label": "Tesla Q3 after close",
+   "kind": "Earnings",
+   "why": "Consensus EPS ~$0.45; the stock fell 14.5% after its last report."
+  },
+  {
+   "date": "2026-10-28",
+   "label": "FOMC rate decision (Oct 27\u201328)",
+   "kind": "Fed",
+   "why": "Hold expected; the statement and press conference set December hike odds."
+  }
+ ]
+}

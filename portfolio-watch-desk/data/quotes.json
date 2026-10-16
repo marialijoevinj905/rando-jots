@@ -1,0 +1,53 @@
+{
+ "updatedAt": "2026-10-16T12:00:00Z",
+ "q": {
+  "NVDA": {
+   "name": "Nvidia",
+   "price": 217.23,
+   "chg": -1.84,
+   "sector": "Semiconductors"
+  },
+  "TSM": {
+   "name": "Taiwan Semiconductor",
+   "price": 430.0,
+   "chg": -3.4,
+   "sector": "Semiconductors"
+  },
+  "MSFT": {
+   "name": "Microsoft",
+   "price": 539.44,
+   "chg": 1.08,
+   "sector": "Software"
+  },
+  "AAPL": {
+   "name": "Apple",
+   "price": 342.0,
+   "chg": -0.28,
+   "sector": "Tech Hardware"
+  },
+  "GOOGL": {
+   "name": "Alphabet",
+   "price": 349.22,
+   "chg": 0.45,
+   "sector": "Communication"
+  },
+  "META": {
+   "name": "Meta Platforms",
+   "price": 736.72,
+   "chg": -0.11,
+   "sector": "Communication"
+  },
+  "AMZN": {
+   "name": "Amazon",
+   "price": 254.76,
+   "chg": 0.27,
+   "sector": "Consumer Discretionary"
+  },
+  "TSLA": {
+   "name": "Tesla",
+   "price": 362.44,
+   "chg": -1.29,
+   "sector": "Consumer Discretionary"
+  }
+ }
+}
