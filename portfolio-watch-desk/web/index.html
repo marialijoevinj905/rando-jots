@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Portfolio Watch Desk</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<!-- Loaded without blocking, so the dashboard still opens instantly when offline -->
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand"><span class="mark" aria-hidden="true">PW</span><h1>Portfolio Watch Desk</h1></div>
+    <div class="status">
+      <span class="pill" id="live-pill"><span class="dot"></span>Connecting…</span>
+      <span class="pill" id="session-pill">US market</span>
+      <span class="pill" id="updated-pill" title="Time of the last price update">—</span>
+      <button class="btn" type="button" id="notify-btn">Turn on desktop alerts</button>
+      <button class="btn" type="button" id="edit-btn">Edit portfolio</button>
+    </div>
+  </div>
+</header>
+
+<section class="tape" aria-label="Market tape">
+  <div class="wrap tape-scroll"><div class="tape-row" id="tape"><div class="tick"><span class="lbl">Market</span><span class="val">Loading…</span></div></div></div>
+</section>
+
+<main class="wrap">
+  <div class="grid-2">
+    <section class="panel" aria-labelledby="pf-h">
+      <div class="panel-head"><h2 id="pf-h">Portfolio</h2><span class="sub">Live prices · click a row for the full technical read</span></div>
+      <div class="kpis" id="kpis"></div>
+      <div class="table-wrap"><table aria-label="Holdings">
+        <thead><tr><th>Holding</th><th>Price</th><th>Day</th><th>Value</th><th>P&amp;L</th><th>Weight</th><th>Signal</th><th style="text-align:left">Pattern</th></tr></thead>
+        <tbody id="rows"></tbody>
+      </table></div>
+      <div class="panel-head" style="border-top:1px solid var(--line)"><h2>Watchlist</h2><span class="sub">Analyzed the same way, so you can spot entries</span></div>
+      <div class="table-wrap"><table aria-label="Watchlist">
+        <thead><tr><th>Symbol</th><th>Price</th><th>Day</th><th>Signal</th></tr></thead>
+        <tbody id="watch"></tbody>
+      </table></div>
+    </section>
+
+    <section class="panel" aria-labelledby="al-h">
+      <div class="panel-head"><h2 id="al-h">Live alerts</h2><span class="sub" id="alert-sub">Stops, targets, patterns, signal changes, big moves, news</span></div>
+      <div class="feed" id="alerts"><div class="empty">No alerts yet. The watcher checks every few seconds while the market is open.</div></div>
+    </section>
+  </div>
+
+  <section class="panel" id="inst" aria-label="Instrument analysis">
+    <div class="inst-head">
+      <span class="sym" id="i-sym">—</span><span class="px" id="i-px"></span><span id="i-chg" class="num"></span><span class="nm" id="i-name"></span>
+      <div class="right"><span class="chip" id="i-ext" hidden></span><span class="eyebrow" id="i-time"></span></div>
+    </div>
+    <div class="inst-grid">
+      <div class="chart-col">
+        <div class="chart-tools">
+          <div class="seg" role="group" aria-label="Timeframe" id="tf-seg">
+            <button type="button" data-tf="1d" aria-pressed="true">Daily</button>
+            <button type="button" data-tf="1m" aria-pressed="false">Today (1-min)</button>
+          </div>
+          <button class="btn" type="button" id="bb-btn" aria-pressed="true">Bollinger</button>
+          <button class="btn" type="button" id="mk-btn" aria-pressed="true">Patterns</button>
+          <div class="legend" id="legend"></div>
+        </div>
+        <div id="chart"><div class="chart-msg">Select a holding to load its chart.</div></div>
+        <div id="rsi-chart"></div>
+      </div>
+      <div class="side">
+        <div class="block">
+          <span class="eyebrow">Technical verdict</span>
+          <div class="verdict"><span class="big" id="v-label">—</span><span class="num" id="v-score"></span><span class="chip" id="v-conf"></span></div>
+          <div class="gauge"><i id="v-needle" style="left:50%"></i></div>
+          <div class="gauge-scale"><span>Sell −100</span><span>Hold</span><span>+100 Strong buy</span></div>
+        </div>
+        <div class="block"><span class="eyebrow">What to consider</span><div class="sugg" id="sugg"></div></div>
+        <div class="block"><span class="eyebrow">Why: signal breakdown</span><div class="comps" id="comps"></div></div>
+      </div>
+    </div>
+    <div class="inst-lower">
+      <section><span class="eyebrow">Candlestick patterns (last 3 bars)</span><div id="pats"></div>
+        <span class="eyebrow">Indicators</span><div class="kv" id="inds"></div></section>
+      <section><span class="eyebrow">Price levels</span><div class="kv" id="levels"></div>
+        <span class="eyebrow">Pivots &amp; Fibonacci</span><div class="table-wrap" id="pivfib"></div></section>
+      <section><span class="eyebrow">Statistics &amp; probabilities</span><div class="kv" id="stats"></div>
+        <span class="eyebrow">Signal track record on this stock</span><div class="table-wrap" id="bt"></div>
+        <span class="eyebrow">Headlines</span><div id="i-news"></div></section>
+    </div>
+  </section>
+
+  <section class="panel" aria-labelledby="nw-h">
+    <div class="panel-head"><h2 id="nw-h">Global news wire</h2><span class="sub" id="news-sub">Market-moving headlines, scored for sentiment and tagged by theme</span>
+      <div class="right"><button class="btn" type="button" id="mine-btn" aria-pressed="false">My holdings only</button></div></div>
+    <div class="feed" id="news"><div class="empty">Headlines load within a minute of starting.</div></div>
+  </section>
+
+  <footer>
+    <p><b>How this works.</b> The watcher runs on your machine or server around the clock. It polls prices every few seconds while US markets are open (slower overnight and at weekends), recomputes every indicator and pattern on each update, and sends alerts to this page, your desktop and any channels you configured.</p>
+    <p><b>Not financial advice.</b> Signals are general technical analysis with a stated track record, not recommendations for your situation. Patterns and indicators fail often; the "track record" figures show how often. Check a broker quote before trading.</p>
+  </footer>
+</main>
+
+<dialog id="editor" aria-labelledby="ed-h">
+  <div class="panel-head"><h2 id="ed-h">Edit portfolio</h2><div class="right"><button class="btn ghost" type="button" id="ed-close" aria-label="Close">Close</button></div></div>
+  <form class="panel-body" id="ed-form" method="dialog">
+    <div class="ed-row ed-head"><span>Symbol</span><span>Shares</span><span>Avg cost $</span><span>Target $</span><span>Stop $</span><span></span></div>
+    <div id="ed-rows" style="display:grid;gap:6px"></div>
+    <div><button class="btn" type="button" id="ed-add">Add holding</button></div>
+    <label class="field" for="ed-cash">Cash $<input id="ed-cash" type="number" step="any" min="0"></label>
+    <label class="field" for="ed-watch">Watchlist (comma separated)<input id="ed-watch" placeholder="GOOGL, AMZN, XLE, BTC-USD"></label>
+    <div class="form-msg" id="ed-msg" role="status"></div>
+    <div style="display:flex;gap:8px"><button class="btn primary" type="submit" id="ed-save">Save</button><button class="btn" type="button" id="ed-cancel">Cancel</button></div>
+  </form>
+</dialog>
+<div class="toast-wrap" id="toasts" aria-live="polite"></div>
+
+<script src="vendor/lightweight-charts.standalone.production.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

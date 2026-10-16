@@ -1,0 +1,10 @@
+{
+  "cash": 5000,
+  "holdings": [
+    {"symbol": "NVDA", "shares": 40, "cost": 152.40, "target": 260, "stop": 195},
+    {"symbol": "AAPL", "shares": 30, "cost": 214.10},
+    {"symbol": "MSFT", "shares": 16, "cost": 431.00, "stop": 500},
+    {"symbol": "TSM", "shares": 22, "cost": 206.50, "target": 480, "stop": 400}
+  ],
+  "watchlist": ["GOOGL", "AMZN", "XLE", "GLD", "BTC-USD"]
+}

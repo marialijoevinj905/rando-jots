@@ -1,0 +1,21 @@
+name: watchdesk tests
+on:
+  push:
+    paths: ["portfolio-watch-desk/**", ".github/workflows/watchdesk-*.yml"]
+  pull_request:
+    paths: ["portfolio-watch-desk/**", ".github/workflows/watchdesk-*.yml"]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python: ["3.10", "3.12", "3.13"]
+    defaults:
+      run:
+        working-directory: portfolio-watch-desk
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - run: python -m unittest discover -s tests -t . -v

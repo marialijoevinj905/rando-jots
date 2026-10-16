@@ -1,0 +1,32 @@
+{
+  "provider": "yahoo",
+  "portfolio_file": "portfolio.json",
+  "state_dir": "state",
+  "benchmark": "SPY",
+  "tape": ["SPY", "QQQ", "DIA", "IWM", "^VIX", "^TNX", "CL=F", "GC=F", "BTC-USD"],
+  "poll_seconds": {"open": 15, "pre": 60, "post": 60, "closed": 300, "crypto": 60},
+  "daily_refresh_seconds": 1800,
+  "news_refresh_seconds": 600,
+  "settings": {
+    "risk_per_trade_pct": 1.0,
+    "max_position_pct": 20.0,
+    "atr_stop_mult": 2.0,
+    "chandelier_mult": 3.0,
+    "risk_free_rate": 0.04
+  },
+  "alert_rules": {
+    "move_pct": 3.0,
+    "near_stop_pct": 3.0,
+    "min_pattern_strength": 2,
+    "news_sentiment": 3,
+    "signal_changes": true
+  },
+  "alerts": {
+    "telegram": {"min_severity": "warn"},
+    "discord": {"min_severity": "warn"},
+    "slack": {"min_severity": "warn"},
+    "email": {"min_severity": "critical", "port": 587, "starttls": true}
+  },
+  "alert_cooldown_seconds": 21600,
+  "server": {"host": "127.0.0.1", "port": 8765}
+}

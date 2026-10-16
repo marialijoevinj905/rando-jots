@@ -1,0 +1,20 @@
+# systemd unit: keeps the watcher running on a Linux server or Raspberry Pi.
+#   sudo cp deploy/watchdesk.service /etc/systemd/system/
+#   edit User= and the paths below, then:
+#   sudo systemctl daemon-reload && sudo systemctl enable --now watchdesk
+#   journalctl -u watchdesk -f      # follow the log
+[Unit]
+Description=Portfolio Watch Desk market watcher
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+User=watch
+WorkingDirectory=/opt/rando-jots/portfolio-watch-desk
+EnvironmentFile=-/opt/rando-jots/portfolio-watch-desk/.env
+ExecStart=/usr/bin/python3 -m watchdesk --config /opt/rando-jots/portfolio-watch-desk/config.json serve
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target

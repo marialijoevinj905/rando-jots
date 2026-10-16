@@ -1,0 +1,15 @@
+# Runs the watcher 24/7 and restarts it after crashes or reboots.
+#   docker compose up -d        then open http://localhost:8765/?token=$WATCHDESK_TOKEN
+services:
+  watchdesk:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "127.0.0.1:8765:8765"   # drop the 127.0.0.1: prefix to expose it on your network (keep the token set)
+    volumes:
+      - ./data:/data
+    env_file:
+      - path: .env
+        required: false
+    environment:
+      WATCHDESK_TOKEN: ${WATCHDESK_TOKEN:-}

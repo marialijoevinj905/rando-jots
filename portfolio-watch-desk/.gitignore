@@ -1,0 +1,8 @@
+# Your own data stays out of git
+config.json
+portfolio.json
+state/
+.env
+__pycache__/
+*.pyc
+data/

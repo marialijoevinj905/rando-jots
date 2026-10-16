@@ -1,0 +1,65 @@
+# Watches your portfolio from GitHub's servers, with no machine of your own running.
+# Every run fetches prices and news, runs the full analysis and sends any new alerts
+# to Telegram / Discord / Slack / email. Alerts already sent are remembered between runs.
+#
+# Off until you opt in:
+#   1. Settings > Secrets and variables > Actions > Variables: WATCHDESK_SCAN_ENABLED = true
+#   2. Secrets: WATCHDESK_PORTFOLIO_JSON (contents of your portfolio.json) and at least one
+#      alert channel (TELEGRAM_BOT_TOKEN + TELEGRAM_CHAT_ID, DISCORD_WEBHOOK_URL, SLACK_WEBHOOK_URL,
+#      or the SMTP_* / ALERT_EMAIL_* secrets).
+# Scheduled runs can start several minutes late when GitHub is busy. For second-by-second
+# watching, run the server (docker compose up -d) instead.
+name: watchdesk scan
+on:
+  schedule:
+    - cron: "*/15 13-21 * * 1-5"   # every 15 min across US market hours (UTC, covers EST and EDT)
+    - cron: "0 */3 * * *"          # every 3 hours otherwise, for overnight news and crypto
+  workflow_dispatch: {}
+concurrency:
+  group: watchdesk-scan
+  cancel-in-progress: false
+jobs:
+  scan:
+    if: vars.WATCHDESK_SCAN_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: portfolio-watch-desk
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Restore alert history
+        uses: actions/cache/restore@v4
+        with:
+          path: portfolio-watch-desk/state
+          key: watchdesk-state-${{ github.run_id }}
+          restore-keys: watchdesk-state-
+      - name: Scan
+        env:
+          WATCHDESK_PORTFOLIO_JSON: ${{ secrets.WATCHDESK_PORTFOLIO_JSON }}
+          WATCHDESK_PROVIDER: ${{ vars.WATCHDESK_PROVIDER || 'yahoo' }}
+          FINNHUB_API_KEY: ${{ secrets.FINNHUB_API_KEY }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+          DISCORD_WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
+          SMTP_HOST: ${{ secrets.SMTP_HOST }}
+          SMTP_PORT: ${{ secrets.SMTP_PORT }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASSWORD: ${{ secrets.SMTP_PASSWORD }}
+          ALERT_EMAIL_FROM: ${{ secrets.ALERT_EMAIL_FROM }}
+          ALERT_EMAIL_TO: ${{ secrets.ALERT_EMAIL_TO }}
+        run: |
+          if [ -z "$WATCHDESK_PORTFOLIO_JSON" ]; then
+            echo "::warning::Add your portfolio as the WATCHDESK_PORTFOLIO_JSON secret to get alerts for it."
+          fi
+          python -m watchdesk --config config.example.json scan --quiet
+      - name: Save alert history
+        if: always()
+        uses: actions/cache/save@v4
+        with:
+          path: portfolio-watch-desk/state
+          key: watchdesk-state-${{ github.run_id }}
